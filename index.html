@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="show_alert"></div>
+    </header>
+    <!-- Login 10 - Bootstrap Brain Component -->
+    <section class="bg-light py-3 py-md-5 py-xl-8">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+            <div class="mb-5"></div>
+            <div class="card border border-light-subtle rounded-4">
+              <div class="card-body p-3 p-md-4 p-xl-5">
+                <form id="form">
+                  <div class="row gy-3 overflow-hidden">
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input
+                          oninput="capitalizeFirstLetter(event)"
+                          type="Name"
+                          class="form-control"
+                          id="name"
+                          placeholder="Name"
+                          onkeyup="nameInput()"
+                        />
+                        <label for="Name" class="form-label">Name</label>
+                        <div id="error-message" class="text-danger ms-3"></div>
+                      </div>
+
+                      <div class="form-floating mb-3">
+                        <input
+                          type="Phone"
+                          class="form-control"
+                          id="phone"
+                          placeholder="Phone"
+                          onkeyup="phoneInput()"
+                        />
+                        <label for="Phone" class="form-label">Phone</label>
+                        <div id="error-sms" class="text-danger ms-3"></div>
+                      </div>
+
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Email"
+                          onkeyup="emailInput()"
+                        />
+                        <label for="email" class="form-label">Email</label>
+                        <div id="error-msg" class="text-danger ms-3"></div>
+                      </div>
+                    </div>
+
+                    <div class="d-grid">
+                      <button
+                        onclick="saveInformation()"
+                        class="btn bg-primary text-light"
+                        id="save"
+                        type="button"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ms-5 me-5 ps-5 pe-5">
+      <div class="table-responsive">
+        <table id="table" class="table">
+          <tr>
+            <th class="text-start">&#x2116;</th>
+            <th class="text-start">Name</th>
+            <th class="text-start">Phone</th>
+            <th class="text-start">Email</th>
+            <th class="text-start">Date</th>
+            <th></th>
+          </tr>
+
+          <!-- <tr id="tbody" class="table-secondary">
+            <td class="align-middle">1</td>
+            <td class="align-middle">John</td>
+            <td class="align-middle">3806124812</td>
+            <td class="align-middle">example@gmail.com</td>
+            <td class="align-middle">YY/MM/DD</td>
+            <td>
+              <button id="edit" class="btn btn-success">Edit</button>
+              <button id="delete" class="btn btn-danger">Delete</button>
+            </td>
+          </tr> -->
+        </table>
+      </div>
+    </footer>
+
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/index.js"></script>
+  </body>
+</html>

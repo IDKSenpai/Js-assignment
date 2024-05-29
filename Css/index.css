@@ -1,0 +1,17 @@
+td,
+tr,
+th {
+  font-family: "Times New Roman", Times, serif;
+}
+
+#edit,
+#delete {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#error-message,
+#error-sms,
+#error-msg {
+  font-size: 12px;
+  margin-top: 4px;
+}
